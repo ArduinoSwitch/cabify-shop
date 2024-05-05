@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="8dp"
+    >
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            tools:src="@drawable/remove_shopping_cart"
+            tools:tint="@android:color/black"
+            android:contentDescription="product_image"
+            />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_weight="1"
+            android:gravity="center"
+            tools:text="Cabify Voucher"
+            />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_weight="1"
+            android:gravity="center"
+            tools:text="7.5"
+            />
+
+</LinearLayout>

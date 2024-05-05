@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/splash"
+    >
+
+    <fragment
+        android:id="@+id/splash"
+        android:name="com.cabify.feature.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/splash_fragment"
+        >
+        <action
+            android:id="@+id/nav_to_main"
+            app:destination="@id/shop_graph"
+            app:popUpTo="@id/main_graph"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+
+    <include
+        app:graph="@navigation/shop_graph"
+        />
+
+    <action
+        android:id="@+id/open_dialog"
+        app:destination="@+id/dialog_graph"
+        >
+        <argument
+            android:name="data"
+            app:argType="com.cabify.commons.navigation.dialog.DialogData"
+            />
+    </action>
+
+    <include app:graph="@navigation/dialog_graph" />
+
+</navigation>

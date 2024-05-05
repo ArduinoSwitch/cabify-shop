@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shop_graph"
+    app:startDestination="@id/shop"
+    >
+
+    <fragment
+        android:id="@+id/shop"
+        android:name="com.cabify.feature.shop.ShopFragment"
+        android:label="ShopFragment"
+        tools:layout="@layout/shop_fragment"
+        >
+        <action
+            android:id="@+id/action_shop_to_result"
+            app:destination="@id/result" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/result"
+        android:name="com.cabify.feature.result.ResultFragment"
+        android:label="ResultFragment"
+        tools:layout="@layout/result_fragment"
+        />
+
+</navigation>
